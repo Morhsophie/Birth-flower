@@ -1,6 +1,6 @@
 # Birth Flower
 
-A birthday greeting, grown one petal at a time. This personal keepsake combines a cotton rose with a Python-rendered animation and a small interactive web preview.
+A birthday greeting, grown one petal at a time. This personal keepsake combines a cotton rose with a 24-second Python-rendered animation and a portfolio landing page.
 
 **[Open the project website](https://morhsophie.github.io/Birth-flower/)** · [View the source on GitHub](https://github.com/Morhsophie/Birth-flower)
 
@@ -8,7 +8,7 @@ A birthday greeting, grown one petal at a time. This personal keepsake combines 
 
 The animation is rendered frame by frame with Pillow, then assembled into an MP4 with ImageIO and FFmpeg. The flower is the cotton rose, associated here with delicate beauty.
 
-The static landing page includes a small browser preview where you can personalize the greeting and replay the flower reveal. It runs without a build step or JavaScript framework.
+The landing page embeds the actual MP4 rendered by the Python script, with native video controls so visitors can play or replay the animation. The static site needs no build step or JavaScript framework.
 
 ## Run the animation
 

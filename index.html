@@ -11,7 +11,6 @@
     <title>Birth Flower — A little moment in bloom</title>
     <link rel="icon" href="Cotton%20Rose.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -50,36 +49,32 @@
         </div>
 
         <div class="demo-wrap" id="demo">
-          <div class="demo-label"><span class="live-dot"></span> A SMALL INTERACTIVE PREVIEW</div>
-          <article class="greeting-card" aria-label="Interactive birthday flower preview">
+          <div class="demo-label"><span class="live-dot"></span> THE FULL 24-SECOND ANIMATION</div>
+          <article class="greeting-card" aria-label="Birthday flower animation video">
             <div class="card-topline">
-              <span>FIELD NOTES <span class="slash">/</span> NO. 011</span>
-              <span class="card-edition">A GIFT IN CODE</span>
+              <span>RENDERED WITH PYTHON <span class="slash">/</span> PILLOW</span>
+              <span class="card-edition">30 FPS</span>
             </div>
-            <div class="flower-scene is-playing" id="flowerScene">
-              <span class="scene-sparkle sparkle-one" aria-hidden="true">✳</span>
-              <span class="scene-sparkle sparkle-two" aria-hidden="true">✳</span>
-              <span class="scene-sparkle sparkle-three" aria-hidden="true">✧</span>
-              <p class="scene-kicker">YOUR BIRTH FLOWER</p>
-              <p class="scene-date">NOVEMBER 11 <span>·</span> COTTON ROSE</p>
-              <img class="flower-art" src="Cotton%20Rose.png" alt="Soft pink cotton rose flowers">
-              <p class="scene-greeting" id="greeting" aria-live="polite">Happy Birthday, Safiya!</p>
-              <p class="scene-meaning">delicate beauty</p>
-            </div>
+            <video
+              class="demo-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster="birthday_video_poster.jpg"
+              aria-label="Safiya's 24-second cotton rose birthday animation"
+            >
+              <source src="Cotton%20Rose_anim.mp4" type="video/mp4">
+              Your browser does not support embedded video. You can
+              <a href="Cotton%20Rose_anim.mp4">download the birthday animation</a>.
+            </video>
             <div class="card-footer">
-              <span>GROWN WITH <span class="heart">♥</span> &amp; PYTHON</span>
-              <span>01 <span class="slash">/</span> 01</span>
+              <span>720 FRAMES <span class="heart">♥</span> MADE WITH CARE</span>
+              <span>MP4</span>
             </div>
           </article>
-          <div class="demo-controls">
-            <label for="nameInput">Make it yours</label>
-            <div class="control-row">
-              <input id="nameInput" type="text" value="Safiya" maxlength="28" autocomplete="off" aria-label="Name for the birthday greeting">
-              <button class="button button-rose" id="replayButton" type="button">
-                <span class="replay-icon" aria-hidden="true">↻</span> Replay bloom
-              </button>
-            </div>
-            <p class="control-hint">Change the name, then replay the little reveal.</p>
+          <div class="video-links">
+            <p class="video-caption">A cotton rose grows into a birthday wish for Safiya. Use the player controls to watch or replay.</p>
+            <a class="video-download" href="Cotton%20Rose_anim.mp4" download>Download the video <span aria-hidden="true">↓</span></a>
           </div>
         </div>
         <div class="hero-side-note" aria-hidden="true">A DIGITAL KEEPSAKE <span>✳</span></div>

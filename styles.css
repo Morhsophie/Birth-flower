@@ -6,7 +6,6 @@
   --ink: #24211f;
   --muted: #716b65;
   --rose: #a34f59;
-  --rose-light: #ead7d2;
   --line: #ded8d1;
   --serif: "Playfair Display", Georgia, serif;
   --sans: "DM Sans", Arial, sans-serif;
@@ -284,86 +283,14 @@ h2 em {
   color: #9b8b80;
 }
 
-.flower-scene {
-  position: relative;
-  min-height: 416px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background:
-    radial-gradient(ellipse at 50% 59%, #523b3b55 0%, transparent 42%),
-    #111110;
-  text-align: center;
-}
-
-.scene-kicker {
-  z-index: 1;
-  margin: 27px 0 6px;
-  color: #f4e9e3;
-  font: 9px var(--mono);
-  letter-spacing: 0.24em;
-}
-
-.scene-date {
-  z-index: 1;
-  margin: 0;
-  color: #b7a89d;
-  font: 7px var(--mono);
-  letter-spacing: 0.16em;
-}
-
-.scene-date span {
-  padding-inline: 5px;
-  color: #d29191;
-}
-
-.flower-art {
-  z-index: 1;
-  width: 193px;
-  height: 240px;
-  margin-top: 5px;
+.demo-video {
+  display: block;
+  width: auto;
+  height: min(165vw, 560px);
+  max-width: 100%;
+  margin-inline: auto;
+  background: #111110;
   object-fit: contain;
-  filter: drop-shadow(0 8px 26px #e7a5a32d);
-}
-
-.scene-greeting {
-  z-index: 1;
-  margin: -4px 12px 4px;
-  color: #fff7f1;
-  font: 500 20px/1.25 var(--serif);
-}
-
-.scene-meaning {
-  z-index: 1;
-  margin-bottom: 17px;
-  color: #d9b7a9;
-  font: italic 10px var(--serif);
-}
-
-.scene-sparkle {
-  position: absolute;
-  color: #e2b590;
-  opacity: 0.65;
-}
-
-.sparkle-one {
-  top: 31%;
-  left: 18%;
-  font-size: 13px;
-}
-
-.sparkle-two {
-  top: 49%;
-  right: 16%;
-  font-size: 9px;
-}
-
-.sparkle-three {
-  right: 25%;
-  bottom: 17%;
-  font-size: 15px;
 }
 
 .card-footer {
@@ -376,75 +303,30 @@ h2 em {
   color: #d18c8b;
 }
 
-.demo-controls {
-  padding: 17px 3px 0;
-}
-
-.demo-controls label {
-  display: block;
-  margin-bottom: 8px;
-  color: #4f4944;
-  font-size: 10px;
-  font-weight: 600;
-}
-
-.control-row {
-  display: flex;
-  gap: 9px;
-}
-
-.control-row input {
-  width: 100%;
-  min-width: 0;
-  border: 1px solid #d5cec6;
-  border-radius: 2px;
-  background: #fbf9f6;
-  padding: 0 12px;
-  color: var(--ink);
-  font-size: 11px;
-}
-
-.control-row input:focus-visible,
 .button:focus-visible,
 a:focus-visible {
   outline: 2px solid #a34f59;
   outline-offset: 3px;
 }
 
-.button-rose {
-  flex: 0 0 auto;
-  background: var(--rose-light);
-  color: #713e43;
-}
-
-.button-rose:hover {
-  background: #e0c3bd;
-}
-
-.replay-icon {
-  font-size: 15px;
-}
-
-.control-hint {
-  margin: 8px 0 0;
+.video-caption {
+  margin: 11px 2px 0;
   color: #89817a;
-  font-size: 9px;
+  font-size: 10px;
+  line-height: 1.7;
 }
 
-.flower-scene.is-playing .flower-art {
-  animation: flower-arrive 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+.video-download {
+  display: inline-block;
+  margin: 8px 2px 0;
+  color: var(--rose);
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.flower-scene.is-playing .scene-sparkle {
-  animation: sparkle-in 1.1s ease both;
-}
-
-.flower-scene.is-playing .sparkle-two {
-  animation-delay: 150ms;
-}
-
-.flower-scene.is-playing .sparkle-three {
-  animation-delay: 300ms;
+.video-download span {
+  margin-left: 4px;
 }
 
 .hero-side-note {
@@ -689,28 +571,6 @@ h2 {
   letter-spacing: 0.06em;
 }
 
-@keyframes flower-arrive {
-  from {
-    opacity: 0.15;
-    transform: translateY(17px) scale(0.86);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes sparkle-in {
-  from {
-    opacity: 0;
-    transform: scale(0.3) rotate(-35deg);
-  }
-  to {
-    opacity: 0.65;
-    transform: scale(1) rotate(0);
-  }
-}
-
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr 0.92fr;
@@ -773,10 +633,6 @@ h2 {
 
   .demo-wrap {
     max-width: none;
-  }
-
-  .flower-scene {
-    min-height: 390px;
   }
 
   .hero-side-note {
@@ -875,18 +731,6 @@ h2 {
     align-items: flex-start;
     flex-direction: column;
     gap: 17px;
-  }
-
-  .control-row {
-    flex-wrap: wrap;
-  }
-
-  .control-row input {
-    min-height: 42px;
-  }
-
-  .control-row .button {
-    width: 100%;
   }
 
   .process-image figcaption {
